@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Notes ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+
+<!-- ✅ CLICKABLE PAPER (ONLY THIS ONE) -->
+<div class="paper" id="finalPaper">
+  <p class="p1">I have one last thing for you 💌</p>
+  <p class="p1" style="color:red;">Click here ❤️</p>
+</div>
+
+<div class="paper heart"></div>
+
+<div class="paper image">
+  <p>and I fallen in</p>
+  <p>Love with You 😍</p>
+  <img src="images/1.jpg">
+</div>
+
+<div class="paper image">
+  <img src="images/2.jpeg">
+</div>
+
+<div class="paper image">
+  <p>How can be</p>
+  <p>someone so cute 💗</p>
+  <img src="images/3.jpg">
+</div>
+
+<div class="paper">
+  <p>You are Cute ❣</p>
+</div>
+
+<div class="paper">
+  <p>Drag the papers 💌</p>
+</div>
+
+<script src="script.js"></script>
+
+<!-- ✅ PAGE FADE + CLICK HANDLER -->
+<script>
+  // Fade in
+  window.onload = () => {
+    document.body.classList.add("loaded");
+  };
+
+  function smoothRedirect(url) {
+    document.body.classList.remove("loaded");
+    setTimeout(() => {
+      window.location.href = url;
+    }, 1000);
+  }
+
+  // Mobile + Click safe
+  const finalPaper = document.getElementById("finalPaper");
+  finalPaper.addEventListener("click", () => smoothRedirect("final.html"));
+  finalPaper.addEventListener("touchstart", () => smoothRedirect("final.html"));
+</script>
+
+</body>
+</html>

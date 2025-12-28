@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final Message ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: black;
+      color: pink;
+      font-family: cursive;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    body.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>Your final message here 💖</h1>
+
+  <script>
+    window.onload = () => {
+      document.body.classList.add("loaded");
+    };
+  </script>
+</body>
+</html>
